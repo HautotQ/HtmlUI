@@ -2,7 +2,7 @@ import SwiftUI
 
 /// **HTMLBuilder** : Permet d'écrire plusieurs éléments HTML dans une closure
 @resultBuilder
-struct HTMLBuilder {
+public struct HTMLBuilder {
     static func buildBlock(_ components: any HTML...) -> [any HTML] {
         return components
     }
@@ -10,14 +10,14 @@ struct HTMLBuilder {
 
 /// **CSSBuilder** : Permet d'écrire plusieurs styles CSS en closure
 @resultBuilder
-struct CSSBuilder {
+public struct CSSBuilder {
     static func buildBlock(_ components: String...) -> [String] {
         return components
     }
 }
 
 @resultBuilder
-struct StyleBuilder {
+public struct StyleBuilder {
     static func buildBlock(_ components: HTML...) -> [HTML] {
         return components
     }
