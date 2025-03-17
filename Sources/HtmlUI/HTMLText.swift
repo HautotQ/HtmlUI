@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// Élément de texte HTML
-struct HTMLText: HTML {
+public struct HTMLText: HTML {
     let content: String
     
     init(_ content: String) {
