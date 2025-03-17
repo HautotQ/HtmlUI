@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// Élément de texte HTML
-struct HTMLScript: HTML {
+public struct HTMLScript: HTML {
     let script: () -> String
     
     init(_ script: @escaping () -> String) {
