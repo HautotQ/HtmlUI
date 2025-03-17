@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct HTMLHeading: HTML {
+public struct HTMLHeading: HTML {
     var level: Int
     var children: [HTML]
     
