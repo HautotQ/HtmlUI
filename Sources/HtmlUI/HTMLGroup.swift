@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// **HTMLGroup** : Permet de regrouper plusieurs éléments HTML
-struct HTMLGroup: HTML {
+public struct HTMLGroup: HTML {
     var children: () -> [HTML]
     
     init(_ children: @escaping () -> [HTML]) {
