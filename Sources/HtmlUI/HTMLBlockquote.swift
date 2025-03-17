@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct HTMLBlockquote: HTML {
+public struct HTMLBlockquote: HTML {
     var children: [HTML]
     
     init(@HTMLBuilder _ children: () -> [HTML]) {
