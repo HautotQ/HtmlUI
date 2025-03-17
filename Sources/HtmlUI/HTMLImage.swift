@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct HTMLImage: HTML {
+public struct HTMLImage: HTML {
     var src: String
     var alt: String?
     
