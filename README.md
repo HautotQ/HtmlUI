@@ -4,7 +4,7 @@ HtmlUI est une librairie Swift permettant de générer du HTML via Swift.
 
 ## Installation
 
-Ajoutez cette librairie via Swift Package Manager :
+Ajoutez cette librairie via Package.swift :
 
 ```swift
 dependencies: [
