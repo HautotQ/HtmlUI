@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct HTMLNav: HTML {
+public struct HTMLNav: HTML {
     var destination: HTMLDocument
     var label: [any HTML]
     
