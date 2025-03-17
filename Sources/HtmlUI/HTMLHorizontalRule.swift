@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct HTMLHorizontalRule: HTML {
+public struct HTMLHorizontalRule: HTML {
     func render() -> String {
         return "<hr />"
     }
