@@ -17,14 +17,6 @@ let package = Package(
             name: "HtmlUI",
             dependencies: []
         ),
-        .target(
-            name: "HTMLStyle",
-            dependencies: []
-        ),
-        .target(
-            name: "Protocols",
-            dependencies: []
-        ),
         .testTarget(
             name: "HtmlUITests",
             dependencies: ["HtmlUI"]
