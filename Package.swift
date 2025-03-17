@@ -24,7 +24,7 @@ let package = Package(
         .target(
             name: "Protocols",
             dependencies: []
-        )
+        ),
         .testTarget(
             name: "HtmlUITests",
             dependencies: ["HtmlUI"]
