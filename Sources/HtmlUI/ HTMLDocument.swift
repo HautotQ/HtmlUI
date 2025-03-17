@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// Protocole HTMLDocument avec ajout de `style`
-protocol HTMLDocument {
+public protocol HTMLDocument {
     var title: String { get }
     var lang: String { get }
     var body: HTML { get }
@@ -12,7 +12,7 @@ protocol HTMLDocument {
 }
 
 /// Extension pour générer le HTML complet
-extension HTMLDocument {
+public extension HTMLDocument {
     func render() -> String {
         return """
         <!DOCTYPE html>
