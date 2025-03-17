@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct HTMLBreak: HTML {
+public struct HTMLBreak: HTML {
     func render() -> String {
         return "<br />"
     }
