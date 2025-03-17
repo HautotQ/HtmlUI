@@ -1,6 +1,6 @@
 import SwiftUI
 
 /// Protocole pour définir un élément HTML
-protocol HTML {
+public protocol HTML {
     func render() -> String
 }
