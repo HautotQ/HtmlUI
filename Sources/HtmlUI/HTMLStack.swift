@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// Pile verticale HTML simulant SwiftUI
-struct HTMLStack: HTML {
+public struct HTMLStack: HTML {
     var children: [any HTML]
     
     init(@HTMLBuilder _ children: () -> [any HTML]) {
@@ -15,7 +15,7 @@ struct HTMLStack: HTML {
     }
 }
 
-extension String: HTML {
+public extension String: HTML {
     func render() -> String {
         return self
     }
