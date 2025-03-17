@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct HTMLCanvas: HTML {
+public struct HTMLCanvas: HTML {
     var width: Int?
     var height: Int?
     var className: String?
