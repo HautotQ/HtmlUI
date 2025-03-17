@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct Body: HTML {
+public struct Body: HTML {
     private var generalStyles: [String]
     private var classStyles: [String: [String]]
     
