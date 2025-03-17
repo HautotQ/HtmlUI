@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct HTMLP: HTML {
+public struct HTMLP: HTML {
     var children: [HTML]
     
     init(@HTMLBuilder _ children: () -> [HTML]) {
