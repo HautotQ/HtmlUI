@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct HTMLStyleButton: HTML {
+public struct HTMLStyleButton: HTML {
     private var generalStyles: [String]
     private var classStyles: [String: [String]]
     
