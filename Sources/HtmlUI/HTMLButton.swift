@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct HTMLButton: HTML {
+public struct HTMLButton: HTML {
     var type: String?
     var className: String?
     var id: String?
