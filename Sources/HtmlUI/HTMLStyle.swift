@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// Le style pour les widgets HTML en Swift
-struct HTMLStyle: HTML {
+public struct HTMLStyle: HTML {
     var styles: [any HTML]
     
     init(@HTMLBuilder _ styles: () -> [any HTML]) {
