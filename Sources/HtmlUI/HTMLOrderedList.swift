@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct HTMLOrderedList: HTML {
+public struct HTMLOrderedList: HTML {
     var children: [HTML]
     
     init(@HTMLBuilder _ children: () -> [HTML]) {
