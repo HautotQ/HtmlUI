@@ -4,7 +4,7 @@ public struct Body: HTML {
     private var generalStyles: [String]
     private var classStyles: [String: [String]]
     
-    init(@CSSBuilder _ generalStyles: () -> [String]) {
+    public init(@CSSBuilder _ generalStyles: () -> [String]) {
         self.generalStyles = generalStyles()
         self.classStyles = [:]
     }
