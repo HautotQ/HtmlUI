@@ -8,15 +8,15 @@ public struct HTMLStack: HTML {
         self.children = children()
     }
     
-    func render() -> String {
+    public func render() -> String {
         return "<div style='display: flex; flex-direction: column; gap: 10px;'>\n" +
         children.map { $0.render() }.joined(separator: "\n") +
         "\n</div>"
     }
 }
 
-public extension String: HTML {
-    func render() -> String {
+extension String: HTML {
+    public func render() -> String {
         return self
     }
 }
