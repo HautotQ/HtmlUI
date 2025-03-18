@@ -3,7 +3,7 @@ import SwiftUI
 public struct HTMLListItem: HTML {
     var children: [HTML]
     
-    init(@HTMLBuilder _ children: () -> [HTML]) {
+    public init(@HTMLBuilder _ children: () -> [HTML]) {
         self.children = children()
     }
     
