@@ -4,7 +4,7 @@ public struct HTMLNav: HTML {
     var destination: HTMLDocument
     var label: [any HTML]
     
-    init(destination: HTMLDocument, @HTMLBuilder content: () -> [any HTML]) {
+    public init(destination: HTMLDocument, @HTMLBuilder content: () -> [any HTML]) {
         self.destination = destination
         self.label = content()
     }
