@@ -13,7 +13,7 @@ public struct HTMLCanvas: HTML {
         self.children = children()
     }
     
-    func render() -> String {
+    public func render() -> String {
         let widthAttr = width != nil ? " width='\(width!)'" : ""
         let heightAttr = height != nil ? " height='\(height!)'" : ""
         let classAttr = className != nil ? " class='\(className!)'" : ""
