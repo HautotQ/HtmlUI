@@ -4,7 +4,11 @@ import SwiftUI
 @resultBuilder
 struct HTMLBuilder {
     static func buildBlock(_ components: any HTML...) -> any HTML {
-        return HTMLStack { components } // Regroupe tous les éléments en un seul
+        return HTMLStack {
+            for component in components {
+                component
+            }
+        }
     }
 }
 
