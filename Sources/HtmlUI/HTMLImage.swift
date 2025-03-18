@@ -9,7 +9,7 @@ public struct HTMLImage: HTML {
         self.alt = alt
     }
     
-    func render() -> String {
+    public func render() -> String {
         let altAttr = alt != nil ? " alt='\(alt!)'" : ""
         return "<img src='\(src)'\(altAttr) />"
     }
