@@ -7,7 +7,7 @@ public struct HTMLOrderedList: HTML {
         self.children = children()
     }
     
-    func render() -> String {
+    public func render() -> String {
         return "<ol>\n" +
         children.map { $0.render() }.joined(separator: "\n") +
         "\n</ol>"
