@@ -5,7 +5,7 @@ public struct HTMLDiv: HTML {
     var className: String?
     var children: [HTML]
     
-    init(className: String? = nil, @HTMLBuilder _ children: () -> [HTML]) {
+    public init(className: String? = nil, @HTMLBuilder _ children: () -> [HTML]) {
         self.className = className
         self.children = children()
     }
