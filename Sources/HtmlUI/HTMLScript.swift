@@ -4,7 +4,7 @@ import SwiftUI
 public struct HTMLScript: HTML {
     let script: () -> String
     
-    init(_ script: @escaping () -> String) {
+    public init(_ script: @escaping () -> String) {
         self.script = script
     }
     
