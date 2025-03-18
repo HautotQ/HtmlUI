@@ -5,9 +5,13 @@ import SwiftUI
 struct HTMLBuilder {
     static func buildBlock(_ components: any HTML...) -> any HTML {
         return HTMLStack {
-            for component in components {
-                component
-            }
+            components  // On passe directement les composants sans boucle
+        }
+    }
+
+    static func buildArray(_ components: [any HTML]) -> any HTML {
+        return HTMLStack {
+            components
         }
     }
 }
