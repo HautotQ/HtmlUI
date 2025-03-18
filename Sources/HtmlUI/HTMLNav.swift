@@ -9,7 +9,7 @@ public struct HTMLNav: HTML {
         self.label = content()
     }
     
-    func render() -> String {
+    public func render() -> String {
         return """
         <a href="\(destination.title.lowercased()).html">
             \(label.map { $0.render() }.joined(separator: "\n"))
