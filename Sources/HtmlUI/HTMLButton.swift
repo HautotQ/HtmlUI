@@ -15,7 +15,7 @@ public struct HTMLButton: HTML {
         self.children = children()
     }
     
-    func render() -> String {
+    public func render() -> String {
         let typeAttr = type != nil ? " type='\(type!)'" : ""
         let classAttr = className != nil ? " class='\(className!)'" : ""
         let idAttr = id != nil ? " id='\(id!)'" : ""
