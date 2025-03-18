@@ -20,7 +20,7 @@ public struct HTMLStyleButton: HTML {
 //        return HTMLStyleButton(generalStyles: self.generalStyles, classStyles: newClassStyles)
 //    }
     
-    func render() -> String {
+    public func render() -> String {
         var styles = [String]()
         
         if !generalStyles.isEmpty {
