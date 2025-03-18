@@ -8,7 +8,7 @@ public struct HTMLText: HTML {
         self.content = content
     }
     
-    func render() -> String {
+    public func render() -> String {
         return "<p>\(content)</p>"
     }
 }
