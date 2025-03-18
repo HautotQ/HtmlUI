@@ -4,7 +4,7 @@ public struct HTMLHeading: HTML {
     var level: Int
     var children: [HTML]
     
-    init(level: Int, @HTMLBuilder _ children: () -> [HTML]) {
+    public init(level: Int, @HTMLBuilder _ children: () -> [HTML]) {
         self.level = level
         self.children = children()
     }
