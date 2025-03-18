@@ -9,7 +9,7 @@ public struct HTMLHeading: HTML {
         self.children = children()
     }
     
-    func render() -> String {
+    public func render() -> String {
         return "<h\(level)>\n" +
         children.map { $0.render() }.joined(separator: "\n") +
         "\n</h\(level)>"
