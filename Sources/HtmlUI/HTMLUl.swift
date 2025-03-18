@@ -7,7 +7,7 @@ public struct HTMLUl: HTML {
         self.children = children()
     }
     
-    func render() -> String {
+    public func render() -> String {
         return "<ul>\n" +
         children.map { $0.render() }.joined(separator: "\n") +
         "\n</ul>"
