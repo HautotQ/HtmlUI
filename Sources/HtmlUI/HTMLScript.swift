@@ -8,7 +8,7 @@ public struct HTMLScript: HTML {
         self.script = script
     }
     
-    func render() -> String {
+    public func render() -> String {
         return "<script>\(String(describing: script))</script>"
     }
 }
