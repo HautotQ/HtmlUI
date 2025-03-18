@@ -4,7 +4,7 @@ import SwiftUI
 public struct HTMLGroup: HTML {
     var children: () -> [HTML]
     
-    init(_ children: @escaping () -> [HTML]) {
+    public init(_ children: @escaping () -> [HTML]) {
         self.children = children
     }
     
