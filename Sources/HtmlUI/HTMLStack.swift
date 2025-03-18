@@ -4,7 +4,7 @@ import SwiftUI
 public struct HTMLStack: HTML {
     var children: [any HTML]
     
-    public init(@HTMLBuilder _ children: () -> [any HTML]) {
+    public init(@HTMLBuilderArray _ children: () -> [any HTML]) {
         self.children = children()
     }
     
