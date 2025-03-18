@@ -4,7 +4,7 @@ import SwiftUI
 public struct HTMLText: HTML {
     let content: String
     
-    init(_ content: String) {
+    public init(_ content: String) {
         self.content = content
     }
     
