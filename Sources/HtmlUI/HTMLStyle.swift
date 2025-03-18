@@ -8,7 +8,7 @@ public struct HTMLStyle: HTML {
         self.styles = styles()
     }
     
-    func render() -> String {
+    public func render() -> String {
         return "<style>\n" + styles.map { $0.render() }.joined(separator: "\n") + "\n</style>"
     }
 }
