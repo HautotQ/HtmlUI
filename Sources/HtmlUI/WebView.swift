@@ -9,13 +9,13 @@ public struct WebView: UIViewRepresentable {
         self.url = url
     }
     
-    func makeUIView(context: Context) -> WKWebView {
+    public func makeUIView(context: Context) -> WKWebView {
         let webView = WKWebView()
         webView.configuration.preferences.setValue(true, forKey: "allowFileAccessFromFileURLs")
         return webView
     }
     
-    func updateUIView(_ webView: WKWebView, context: Context) {
+    public func updateUIView(_ webView: WKWebView, context: Context) {
         webView.loadFileURL(url, allowingReadAccessTo: url.deletingLastPathComponent())
     }
 }
