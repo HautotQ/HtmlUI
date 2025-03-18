@@ -3,15 +3,8 @@ import SwiftUI
 /// **HTMLBuilder** : Permet d'écrire plusieurs éléments HTML dans une closure
 @resultBuilder
 struct HTMLBuilder {
-    static func buildPartialBlock(first: any HTML) -> any HTML {
-        return first
-    }
-
-    static func buildPartialBlock(accumulated: any HTML, next: any HTML) -> any HTML {
-        return HTMLStack {
-            accumulated
-            next
-        }
+    static func buildBlock(_ components: any HTML...) -> any HTML {
+        return HTMLStack { components }
     }
 }
 
