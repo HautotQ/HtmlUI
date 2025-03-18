@@ -4,7 +4,7 @@ import SwiftUI
 @resultBuilder
 struct HTMLBuilder {
     static func buildBlock(_ components: any HTML...) -> any HTML {
-        return HTMLStack { components }
+        return components
     }
 }
 
@@ -17,8 +17,8 @@ struct CSSBuilder {
 }
 
 @resultBuilder
-struct StyleBuilder {
-    static func buildBlock(_ components: HTML...) -> [HTML] {
+struct HTMLBuilderArray {
+    static func buildBlock(_ components: any HTML...) -> [any HTML] {
         return components
     }
 }
