@@ -1,7 +1,7 @@
 import SwiftUI
 
 public struct HTMLHorizontalRule: HTML {
-    func render() -> String {
+    public func render() -> String {
         return "<hr />"
     }
 }
