@@ -4,7 +4,7 @@ import SwiftUI
 public struct HTMLStyle: HTML {
     var styles: [any HTML]
     
-    init(@HTMLBuilder _ styles: () -> [any HTML]) {
+    public init(@HTMLBuilder _ styles: () -> [any HTML]) {
         self.styles = styles()
     }
     
