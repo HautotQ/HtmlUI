@@ -10,7 +10,7 @@ public struct HTMLDiv: HTML {
         self.children = children()
     }
     
-    func render() -> String {
+    public func render() -> String {
         let classAttr = className != nil ? " class='\(className!)'" : ""
         return "<div\(classAttr)>\n" +
         children.map { $0.render() }.joined(separator: "\n") +
