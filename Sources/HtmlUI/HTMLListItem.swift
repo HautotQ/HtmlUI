@@ -7,7 +7,7 @@ public struct HTMLListItem: HTML {
         self.children = children()
     }
     
-    func render() -> String {
+    public func render() -> String {
         return "<li>\n" +
         children.map { $0.render() }.joined(separator: "\n") +
         "\n</li>"
