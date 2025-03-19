@@ -3,7 +3,7 @@ import SwiftUI
 public struct HTMLBlockquote: HTML {
     var children: [HTML]
     
-    public init(@HTMLBuilder _ children: () -> [HTML]) {
+    public init(@HTMLBuilderArray _ children: () -> [HTML]) {
         self.children = children()
     }
     
