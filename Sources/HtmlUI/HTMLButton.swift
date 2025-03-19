@@ -7,7 +7,7 @@ public struct HTMLButton: HTML {
     var onClick: String? // Ajout de l'attribut onClick
     var children: [HTML]
     
-    public init(type: String? = nil, className: String? = nil, id: String? = nil, onClick: String? = nil, @HTMLBuilder _ children: () -> [HTML]) {
+    public init(type: String? = nil, className: String? = nil, id: String? = nil, onClick: String? = nil, @HTMLBuilderArray _ children: () -> [HTML]) {
         self.type = type
         self.className = className
         self.id = id
