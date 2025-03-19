@@ -6,7 +6,7 @@ public struct HTMLCanvas: HTML {
     var className: String?
     var children: [HTML]
     
-    public init(width: Int? = nil, height: Int? = nil, className: String? = nil, @HTMLBuilder _ children: () -> [HTML]) {
+    public init(width: Int? = nil, height: Int? = nil, className: String? = nil, @HTMLBuilderArray _ children: () -> [HTML]) {
         self.width = width
         self.height = height
         self.className = className
