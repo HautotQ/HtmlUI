@@ -3,7 +3,7 @@ import SwiftUI
 public struct HTMLOrderedList: HTML {
     var children: [HTML]
     
-    public init(@HTMLBuilder _ children: () -> [HTML]) {
+    public init(@HTMLBuilderArray _ children: () -> [HTML]) {
         self.children = children()
     }
     
