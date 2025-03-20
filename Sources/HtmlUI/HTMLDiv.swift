@@ -13,7 +13,7 @@ public struct HTMLDiv: HTML {
     public func render() -> String {
         let classAttr = className != nil ? " class='\(className!)'" : ""
         return "<div\(classAttr)>\n" +
-        children.map { $0.render() }.joined(separator: "\n") +
+        children.render() +
         "\n</div>"
     }
 }
