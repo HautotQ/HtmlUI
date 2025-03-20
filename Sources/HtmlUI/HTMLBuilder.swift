@@ -4,7 +4,7 @@ import SwiftUI
 @resultBuilder
 struct HTMLBuilder {
     static func buildBlock(_ components: any HTML...) -> any HTML {
-        return HTMLStack { Array(components) } // Force la conversion en tableau explicite
+        return HTMLStack { components }
     }
 }
 
