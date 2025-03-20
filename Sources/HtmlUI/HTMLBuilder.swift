@@ -21,6 +21,10 @@ struct CSSBuilder {
 
 @resultBuilder
 struct HTMLBuilderArray {
+    static func buildBlock(_ components: any HTML...) -> [any HTML] {
+        return components
+    }
+
     static func buildPartialBlock(first: any HTML) -> [any HTML] {
         return [first]
     }
