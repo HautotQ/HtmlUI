@@ -4,7 +4,7 @@ public struct HTMLFooter: HTML {
     var className: String?
     var children: [HTML]
     
-    public init(className: String? = nil, @StyleBuilder _ children: () -> [HTML]) {
+    public init(className: String? = nil, @CSSBuilder _ children: () -> [HTML]) {
         self.className = className
         self.children = children()
     }
