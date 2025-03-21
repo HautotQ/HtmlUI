@@ -24,12 +24,4 @@ struct HTMLBuilderArray {
     static func buildBlock(_ components: any HTML...) -> [any HTML] {
         return components
     }
-
-    static func buildPartialBlock(first: any HTML) -> [any HTML] {
-        return [first]
-    }
-
-    static func buildPartialBlock(accumulated: [any HTML], next: any HTML) -> [any HTML] {
-        return accumulated + [next]
-    }
 }
