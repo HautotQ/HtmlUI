@@ -2,7 +2,7 @@ public struct HTMLSection: HTML {
     var title: String?
     var children: [HTML]
     
-    public init(title: String? = nil, @CSSBuilder _ children: () -> [HTML]) {
+    public init(title: String? = nil, @HTMLBuilder _ children: () -> [HTML]) {
         self.title = title
         self.children = children()
     }
