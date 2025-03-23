@@ -1,4 +1,4 @@
-# Liste des balises CSS
+# Liste des balises html
 ## Structure de base
 
 `<html>`: Définit un document HTML
