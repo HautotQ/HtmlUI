@@ -1,13 +1,13 @@
 import SwiftUI
 
-public struct HTMLButton: HTML {
+struct HTMLButton: HTML {
     var type: String?
     var className: String?
     var id: String?
     var onClick: String? // Ajout de l'attribut onClick
-    var children: [HTML]
+    var children: any HTML // Utilisation de [any HTML] au lieu de [HTML]
     
-    public init(type: String? = nil, className: String? = nil, id: String? = nil, onClick: String? = nil, @HTMLBuilderArray _ children: () -> [HTML]) {
+    init(type: String? = nil, className: String? = nil, id: String? = nil, onClick: String? = nil, @HTMLBuilder _ children: () -> any HTML) {
         self.type = type
         self.className = className
         self.id = id
@@ -15,14 +15,14 @@ public struct HTMLButton: HTML {
         self.children = children()
     }
     
-    public func render() -> String {
-        let typeAttr = type != nil ? " type='\(type!)'" : ""
-        let classAttr = className != nil ? " class='\(className!)'" : ""
-        let idAttr = id != nil ? " id='\(id!)'" : ""
-        let onClickAttr = onClick != nil ? " onClick='\(onClick!)'" : "" // Gère l'attribut onClick
+    func render() -> String {
+        let typeAttr = type.map { " type='\($0)'" } ?? ""
+        let classAttr = className.map { " class='\($0)'" } ?? ""
+        let idAttr = id.map { " id='\($0)'" } ?? ""
+        let onClickAttr = onClick.map { " onClick='\($0)'" } ?? "" // Gère l'attribut onClick
         
         return "<button\(typeAttr)\(classAttr)\(idAttr)\(onClickAttr)>\n" +
-        children.map { $0.render() }.joined(separator: "\n") +
+        children.render()/*map { $0.render() }.joined(separator: "\n")*/ +
         "\n</button>"
     }
 }
