@@ -1,13 +1,13 @@
 import SwiftUI
 
-struct HTMLButton: HTML {
+public struct HTMLButton: HTML {
     var type: String?
     var className: String?
     var id: String?
     var onClick: String? // Ajout de l'attribut onClick
     var children: any HTML // Utilisation de [any HTML] au lieu de [HTML]
     
-    init(type: String? = nil, className: String? = nil, id: String? = nil, onClick: String? = nil, @HTMLBuilder _ children: () -> any HTML) {
+    public init(type: String? = nil, className: String? = nil, id: String? = nil, onClick: String? = nil, @HTMLBuilder _ children: () -> any HTML) {
         self.type = type
         self.className = className
         self.id = id
@@ -15,7 +15,7 @@ struct HTMLButton: HTML {
         self.children = children()
     }
     
-    func render() -> String {
+    public func render() -> String {
         let typeAttr = type.map { " type='\($0)'" } ?? ""
         let classAttr = className.map { " class='\($0)'" } ?? ""
         let idAttr = id.map { " id='\($0)'" } ?? ""
