@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// **HTMLDiv** : Division HTML avec classe CSS
-struct HTMLDiv: HTML {
+public struct HTMLDiv: HTML {
     var className: String?
     var id: String?
     var style: String?
