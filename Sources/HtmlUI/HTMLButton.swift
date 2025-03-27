@@ -5,9 +5,9 @@ public struct HTMLButton: HTML {
     var className: String?
     var id: String?
     var onClick: String? // Ajout de l'attribut onClick
-    var children: any HTML // Utilisation de [any HTML] au lieu de [HTML]
+    var children: [any HTML] // Utilisation de [any HTML] au lieu de [HTML]
     
-    public init(type: String? = nil, className: String? = nil, id: String? = nil, onClick: String? = nil, @HTMLBuilder _ children: () -> any HTML) {
+    public init(type: String? = nil, className: String? = nil, id: String? = nil, onClick: String? = nil, @HTMLBuilder _ children: () -> [any HTML]) {
         self.type = type
         self.className = className
         self.id = id
