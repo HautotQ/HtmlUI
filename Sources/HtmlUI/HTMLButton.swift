@@ -22,7 +22,7 @@ public struct HTMLButton: HTML {
         let onClickAttr = onClick.map { " onClick='\($0)'" } ?? "" // Gère l'attribut onClick
         
         return "<button\(typeAttr)\(classAttr)\(idAttr)\(onClickAttr)>\n" +
-        children.render()/*map { $0.render() }.joined(separator: "\n")*/ +
+        children.map { $0.render() }.joined(separator: "\n")*/ +
         "\n</button>"
     }
 }
