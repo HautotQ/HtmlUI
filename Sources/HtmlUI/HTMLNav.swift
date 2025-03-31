@@ -1,7 +1,7 @@
 import SwiftUI
 
 public struct HTMLNav: HTML {
-    var destination: HTMLDocument
+    var destination: HTMLDocument?
     var label: [any HTML]
     var onClick: String?
     var target: String?
@@ -16,7 +16,7 @@ public struct HTMLNav: HTML {
     var style: String?
 
     public init(
-        destination: HTMLDocument,
+        destination: HTMLDocument? = nil,
         onClick: String? = nil,
         target: String? = nil,
         download: String? = nil,
@@ -48,6 +48,7 @@ public struct HTMLNav: HTML {
     public func render() -> String {
         var attributes: [String] = []
         
+        if let href = destination?.title.lowercased() { attributes.append("href=\"\(href).html\"") }
         if let onClick = onClick { attributes.append("onclick=\"\(onClick)\"") }
         if let target = target { attributes.append("target=\"\(target)\"") }
         if let download = download { attributes.append("download=\"\(download)\"") }
@@ -61,9 +62,9 @@ public struct HTMLNav: HTML {
         if let style = style { attributes.append("style=\"\(style)\"") }
 
         let attributesString = attributes.isEmpty ? "" : " " + attributes.joined(separator: " ")
-        
+
         return """
-        <a href="\(destination.title.lowercased()).html"\(attributesString)>
+        <a\(attributesString)>
             \(label.map { $0.render() }.joined(separator: "\n"))
         </a>
         """
