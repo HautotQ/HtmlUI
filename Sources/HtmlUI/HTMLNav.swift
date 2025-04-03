@@ -1,7 +1,12 @@
 import SwiftUI
 
+public enum Destination {
+    case document(HTMLDocument)
+    case url(String)
+}
+
 public struct HTMLNav: HTML {
-    var destination: Either<HTMLDocument, String>?
+    var destination: Destination?
     var label: [any HTML]
     var onClick: String?
     var target: String?
@@ -16,7 +21,7 @@ public struct HTMLNav: HTML {
     var style: String?
 
     public init(
-        destination: Either<HTMLDocument, String>? = nil,
+        destination: Destination? = nil,
         onClick: String? = nil,
         target: String? = nil,
         download: String? = nil,
@@ -50,10 +55,10 @@ public struct HTMLNav: HTML {
 
         if let destination = destination {
             switch destination {
-            case .left(let doc):
+            case .document(let doc):
                 attributes.append("href=\"\(doc.title.lowercased()).html\"")
-            case .right(let urlString):
-                attributes.append("href=\"\(urlString)\"")
+            case .url(let urlString):
+                attributes.append("href=\"\(urlString)\"") // Ici, on s'assure que l'URL est bien prise en compte
             }
         }
 
@@ -77,10 +82,4 @@ public struct HTMLNav: HTML {
         </a>
         """
     }
-}
-
-// Définition du type générique Either pour supporter les deux types
-public enum Either<L, R> {
-    case left(L)
-    case right(R)
 }
