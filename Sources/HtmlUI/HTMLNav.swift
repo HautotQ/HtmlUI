@@ -80,7 +80,7 @@ public struct HTMLNav: HTML {
 }
 
 // Définition du type générique Either pour supporter les deux types
-enum Either<L, R> {
+public enum Either<L, R> {
     case left(L)
     case right(R)
 }
