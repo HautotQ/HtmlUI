@@ -1,14 +1,13 @@
 import SwiftUI
 
-/// Protocole HTMLDocument avec ajout de `style`
+/// Protocole HTMLDocument avec `style`, `script` et maintenant `head` personnalisable
 public protocol HTMLDocument {
     var title: String { get }
     var lang: String { get }
+    var head: HTML { get } // Nouvelle propriété
     var body: HTML { get }
     var script: HTML { get }
     var style: HTML { get }
-    
-    func render() -> String
 }
 
 /// Extension pour générer le HTML complet
@@ -19,7 +18,7 @@ public extension HTMLDocument {
         <html lang="\(lang)">
         <head>
             <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            \(head.render())
             <title>\(title)</title>
             \(style.render())
         </head>
